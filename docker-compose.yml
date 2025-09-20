@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  pipelinepro:
+    build: .
+    volumes:
+      - .:/app
+    working_dir: /app
+    tty: true
+    environment:
+      - DBT_PROFILES_DIR=/app
+    # Optionally expose ports if needed
+    # ports:
+    #   - "8080:8080"
